@@ -24,6 +24,13 @@ sudo apt-get install minicom
   * Multi: N
 
 ## Create project with partial reconfiguration
+The necessary IP cores (Example block design shows in "example_bd"):
+
+  * microblaze
+  * AXI interconnect
+  * AXi HWICAP
+  * AXI BRAM controller
+  
 ### partial reconfig non-ip type 
 Normally, create a PR wizard and draw pblock, then generate full and partial bitstreams
 ### partial reconfig customized IP type module(such as HLS IP core)
@@ -69,7 +76,9 @@ open_checkpoint <static design checkpoint directory>/<checkpointname1>.dcp
 ```
 read_checkpoint -cell <block design module>/<IP module> <child design synthsis directory>/<IP module's dcp file>
 ``` 
-  (11) Implement the design, which is the same as (3)
+  (11) Implement the design and generate bitstreams, which is the same as (3) and (7)
+  
+  
 
 
 
