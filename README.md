@@ -32,9 +32,9 @@ The necessary IP cores (Example block design based on Nexy4DDR board shown in "e
   * AXI BRAM controller
   * AXI UART (depands on board)
   
-### partial reconfig non-ip type 
+### Partial reconfigure non-IP type 
 Normally, create a PR wizard and draw pblock, then generate full and partial bitstreams
-### partial reconfig customized IP type module(such as HLS IP core)
+### Partial reconfigure customized IP type module(such as HLS IP core)
   (1) Synthesis the project and draw proper pblock for selected IP type module
   
   (2) Set IP module as PR, reset as 1 and snapping mode as on
@@ -84,7 +84,8 @@ read_checkpoint -cell <block design module>/<IP module> <child design synthsis d
 vivado -mode tcl
 write_cfgmem -format bin -size 32 -loadbit "up 0x0 <PR bitfile directory>/<PR bitfiles>" -file <binfile name>.bin disablebitswap
 ```
-  
+## Programming on board
+After export hardware, launch SDK
   
 
 
