@@ -34,7 +34,7 @@ The necessary IP cores (Example block design based on Nexy4DDR board shown in "e
   
 ### Partial reconfigure non-IP type 
 Normally, create a PR wizard and draw pblock, then generate full and partial bitstreams
-### Partial reconfigure customized IP type module(such as HLS IP core)
+### Partial reconfigure customized IP type module (such as HLS IP core)
   (1) Synthesis the project and draw proper pblock for selected IP type module
   
   (2) Set IP module as PR, reset as 1 and snapping mode as on
