@@ -85,11 +85,9 @@ vivado -mode tcl
 write_cfgmem -format bin -size 32 -loadbit "up 0x0 <PR bitfile directory>/<PR bitfiles>" -file <binfile name>.bin disablebitswap
 ```
 ## Programming on board
-After export hardware, launch SDK
-  
-
-
-
-
-
-
+###1. After export hardware, launch SDK. In SDK, import partial_reconfig.c in the software application and run
+###2. open minicom to connect UART terminal
+```
+sudo minicom -D /dev/<UART terminal> -b 115200 -8 -o
+```
+###3. Follow the menu to load binary files. (Note: hit crtl & a then hit s, select Binary, then select partial binary file to load)
