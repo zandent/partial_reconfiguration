@@ -12,14 +12,16 @@ sudo apt-get install minicom
  sudo apt-get install pv
  ```
   (2) Import the script "bin_transfer" in ~/bin/ directory
+  
   (3) Settings in minicom. In minicom terminal, hit ctrl & A, then hit 'o' to open minicom configuration. Enter File transfer protocols. Add a new section as following:
-  Name: Binary
-  Program: ~/bin/bin_transfer -o %l
-  Name: Y
-  U/D:  U
-  FullScr: Y
-  IO-Red: N
-  Multi: N
+  
+  *Name: Binary
+  *Program: ~/bin/bin_transfer -o %l
+  *Name: Y
+  *U/D:  U
+  *FullScr: Y
+  *IO-Red: N
+  *Multi: N
 
 ## create project with partial reconfiguration
 ### partial reconfig non-ip type 
