@@ -41,19 +41,35 @@ opt_design
 place_design
 route_design
 ```
-  (4) Set the IP module as black box and lock the design
+  (4) Set the modified IP module as black box
+```
+update_design -cell <block design module>/<IP module> -black_box
+```
+  (5) Set the IP module as black box and lock the design
 ```
 lock_design -level routing
 ```
-  (5) Write the checkpoint as static design
+  (6) Write the checkpoint as static design
 ```
 write_checkpoint -force <checkpointname1>.dcp
 ```
-  (6) Generate full and partial bitstream (Do not click "generate bitstream" on the left. It cannot generate partial bitstream. Only to do is unput the following command in the console). After this step, the full and partial bitstream will be generated in current work reopsitory
+  (7) Generate full and partial bitstream (Do not click "generate bitstream" on the left. It cannot generate partial bitstream. Only to do is unput the following command in the console). After this step, the full and partial bitstream will be generated in current work reopsitory
 ```
 write_bitstream <fullbitstreamname>.bit
 ```
-  (7) Next copy this project as a new project, replace the PR region with a new IP core
+  (8) Next copy this project as a new project, replace the PR region with a new IP core, which is the same as partial reconfiguring non_ip module. Then generate output products for the block design and synthesis the design
+  
+  (9) Open previous project checkpoint. Vivado will pop out a new window for the implement design of previous project
+```
+open_checkpoint <static design checkpoint directory>/<checkpointname1>.dcp
+```
+  (10) Set the modified IP module as black box, which is the same as (4)
+
+  (11) In the new window console (Caution: Even if the terminals of the two windows' consoles are the same, the following command must be based on the previous project in the new window!!!), read the checkpoint of the new project's modified IP module
+```
+read_checkpoint -cell <block design module>/<IP module> <child design synthsis directory>/<IP module's dcp file>
+``` 
+  (11) Implement the design, which is the same as (3)
 
 
 
