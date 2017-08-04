@@ -24,7 +24,7 @@ sudo apt-get install minicom
   * Multi: N
 
 ## Create project with partial reconfiguration
-The necessary IP cores (Example block design shows in "example_bd"):
+The necessary IP cores (Example block design based on Nexy4DDR board shown in "example_bd.png"):
 
   * microblaze
   * AXI interconnect
