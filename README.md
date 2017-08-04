@@ -30,6 +30,7 @@ The necessary IP cores (Example block design based on Nexy4DDR board shown in "e
   * AXI interconnect
   * AXi HWICAP
   * AXI BRAM controller
+  * AXI UART (depands on board)
   
 ### partial reconfig non-ip type 
 Normally, create a PR wizard and draw pblock, then generate full and partial bitstreams
@@ -77,6 +78,12 @@ open_checkpoint <static design checkpoint directory>/<checkpointname1>.dcp
 read_checkpoint -cell <block design module>/<IP module> <child design synthsis directory>/<IP module's dcp file>
 ``` 
   (11) Implement the design and generate bitstreams, which is the same as (3) and (7)
+  
+  (12) Convert partial bitstram files (*.bit) to binary files (*.bin)
+```
+vivado -mode tcl
+write_cfgmem -format bin -size 32 -loadbit "up 0x0 <PR bitfile directory>/<PR bitfiles>" -file <binfile name>.bin disablebitswap
+```
   
   
 
