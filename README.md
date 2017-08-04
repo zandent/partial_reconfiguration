@@ -15,13 +15,13 @@ sudo apt-get install minicom
   
   (3) Settings in minicom. In minicom terminal, hit ctrl & A, then hit 'o' to open minicom configuration. Enter File transfer protocols. Add a new section as following:
   
-  *Name: Binary
-  *Program: ~/bin/bin_transfer -o %l
-  *Name: Y
-  *U/D:  U
-  *FullScr: Y
-  *IO-Red: N
-  *Multi: N
+  * Name: Binary
+  * Program: ~/bin/bin_transfer -o %l
+  * Name: Y
+  * U/D:  U
+  * FullScr: Y
+  * IO-Red: N
+  * Multi: N
 
 ## create project with partial reconfiguration
 ### partial reconfig non-ip type 
