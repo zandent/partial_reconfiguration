@@ -91,4 +91,4 @@ write_cfgmem -format bin -size 32 -loadbit "up 0x0 <PR bitfile directory>/<PR bi
 ```
 sudo minicom -D /dev/<UART terminal> -b 115200 -8 -o
 ```
-3. Follow the menu to load binary files. (Note: hit crtl & a then hit s, select Binary, then select partial binary file to load)
+3. Follow the menu to load binary files. (Note: To send binary files through minicom, hit crtl & a then hit s, select Binary, then select partial binary file to load)
